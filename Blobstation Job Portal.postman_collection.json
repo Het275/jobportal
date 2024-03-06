@@ -1,0 +1,1048 @@
+{
+	"info": {
+		"_postman_id": "3fad64c3-c89a-4b86-b25b-9c8994b28a26",
+		"name": "Blobstation Job Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27320350"
+	},
+	"item": [
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Admin Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin@admin.com\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "261"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"105-stFTxQLS0RepNNvo28D2WU2+8Hs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Aug 2023 05:07:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": \"64c8b19648a651d4b31f481f\",\n    \"role\": \"admin\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjRjOGIxOTY0OGE2NTFkNGIzMWY0ODFmIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjkxOTg5NjU1LCJleHAiOjE2OTE5OTE0NTV9.b4JNdJels_IKjALYaOjMV4lLa1yDvZ1f4-HvnAR_CW4\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Job Application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Trudy Swanborrow",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "tswanborrowc@reference.com",
+							"type": "text"
+						},
+						{
+							"key": "contactNumber",
+							"value": "2159876992",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "1 year 8 months",
+							"type": "text"
+						},
+						{
+							"key": "currentJobLocation",
+							"value": "Houndé",
+							"type": "text"
+						},
+						{
+							"key": "currentOrganization",
+							"value": "Runolfsson Group",
+							"type": "text"
+						},
+						{
+							"key": "currentCtc",
+							"value": "4 LPA",
+							"type": "text"
+						},
+						{
+							"key": "expectedCtc",
+							"value": "10 LPA",
+							"type": "text"
+						},
+						{
+							"key": "noticePeriod",
+							"value": "3 months",
+							"type": "text"
+						},
+						{
+							"key": "currentDesignation",
+							"value": "Structural Engineer",
+							"type": "text"
+						},
+						{
+							"key": "CV",
+							"type": "file",
+							"src": "/C:/Users/blobs/Downloads/PDF.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/job",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"job"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Job Application",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lorem Ipsun",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "abc@abc.com",
+									"type": "text"
+								},
+								{
+									"key": "contactNumber",
+									"value": "9483434932",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "2 years",
+									"type": "text"
+								},
+								{
+									"key": "currentJobLocation",
+									"value": "Ahmedabad",
+									"type": "text"
+								},
+								{
+									"key": "currentOrganization",
+									"value": "Blobstation",
+									"type": "text"
+								},
+								{
+									"key": "currentCtc",
+									"value": "10 lakhs",
+									"type": "text"
+								},
+								{
+									"key": "expectedCtc",
+									"value": "15 lakhs",
+									"type": "text"
+								},
+								{
+									"key": "noticePeriod",
+									"value": "2 months",
+									"type": "text"
+								},
+								{
+									"key": "currentDesignation",
+									"value": "Developer",
+									"type": "text"
+								},
+								{
+									"key": "CV",
+									"type": "file",
+									"src": "/C:/Users/blobs/Downloads/Aadhar.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "340"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"154-nscYc3UgQ+Y0BtLQLwJaIb/B17M\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Aug 2023 11:52:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Lorem Ipsun\",\n    \"email\": \"abc@abc.com\",\n    \"contactNumber\": \"9483434932\",\n    \"experience\": \"2 years\",\n    \"currentJobLocation\": \"Ahmedabad\",\n    \"currentOrganization\": \"Blobstation\",\n    \"currentCtc\": \"10 lakhs\",\n    \"expectedCtc\": \"15 lakhs\",\n    \"noticePeriod\": \"2 months\",\n    \"currentDesignation\": \"Developer\",\n    \"CV\": \"1691754746150.jpeg\",\n    \"_id\": \"64d620fa4a48e444101c1d6a\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Job Applications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/job?searchTerm=lorem&page=2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"job"
+					],
+					"query": [
+						{
+							"key": "sortField",
+							"value": "createdAt",
+							"disabled": true
+						},
+						{
+							"key": "searchTerm",
+							"value": "lorem"
+						},
+						{
+							"key": "sortOrder",
+							"value": "desc",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Job Applications",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1018"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3fa-N6tiEFnpuU/jJT5KiDMqIIDHRoU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Aug 2023 11:53:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Lorem Ipsun\",\n        \"email\": \"abc@abc.com\",\n        \"contactNumber\": \"9483434932\",\n        \"experience\": \"2 years\",\n        \"currentJobLocation\": \"Ahmedabad\",\n        \"currentOrganization\": \"Blobstation\",\n        \"currentCtc\": \"10 lakhs\",\n        \"expectedCtc\": \"15 lakhs\",\n        \"noticePeriod\": \"2 months\",\n        \"currentDesignation\": \"Developer\",\n        \"CV\": \"1691754765733.jpeg\",\n        \"_id\": \"64d6210d4a48e444101c1d6b\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Lorem Ipsum\",\n        \"email\": \"abc@abc.com\",\n        \"contactNumber\": \"9483434932\",\n        \"experience\": \"2 years\",\n        \"currentJobLocation\": \"Ahmedabad\",\n        \"currentOrganization\": \"Blobstation\",\n        \"currentCtc\": \"10 lakhs\",\n        \"expectedCtc\": \"15 lakhs\",\n        \"noticePeriod\": \"2 months\",\n        \"currentDesignation\": \"Developer\",\n        \"CV\": \"1691754771799.jpeg\",\n        \"_id\": \"64d621134a48e444101c1d6c\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Dolor\",\n        \"email\": \"zyz@abc.com\",\n        \"contactNumber\": \"9483434932\",\n        \"experience\": \"2 years\",\n        \"currentJobLocation\": \"Ahmedabad\",\n        \"currentOrganization\": \"Blobstation\",\n        \"currentCtc\": \"10 lakhs\",\n        \"expectedCtc\": \"15 lakhs\",\n        \"noticePeriod\": \"2 months\",\n        \"currentDesignation\": \"Developer\",\n        \"CV\": \"1691754785903.jpeg\",\n        \"_id\": \"64d621214a48e444101c1d6d\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Job Application By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/job/64f1893cd3d06d002b93a286",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"job",
+						"64f1893cd3d06d002b93a286"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Job Application By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/job/64d6210d4a48e444101c1d6b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"64d6210d4a48e444101c1d6b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "340"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"154-JTjJei1swxEKpAf3U4IO2lJgJAM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Aug 2023 13:01:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Lorem Ipsun\",\n    \"email\": \"abc@abc.com\",\n    \"contactNumber\": \"9483434932\",\n    \"experience\": \"2 years\",\n    \"currentJobLocation\": \"Ahmedabad\",\n    \"currentOrganization\": \"Blobstation\",\n    \"currentCtc\": \"10 lakhs\",\n    \"expectedCtc\": \"15 lakhs\",\n    \"noticePeriod\": \"2 months\",\n    \"currentDesignation\": \"Developer\",\n    \"CV\": \"1691754765733.jpeg\",\n    \"_id\": \"64d6210d4a48e444101c1d6b\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Job Application",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Dolor Amet",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "shubham.poddar@blobstation.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "contactNumber",
+							"value": "9483434932",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "experience",
+							"value": "2 years",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "currentJobLocation",
+							"value": "Ahmedabad",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "currentOrganization",
+							"value": "Blobstation",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "currentCtc",
+							"value": "10 lakhs",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "expectedCtc",
+							"value": "15 lakhs",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "noticePeriod",
+							"value": "2 months",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "currentDesignation",
+							"value": "Developer",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "CV",
+							"type": "file",
+							"src": "/C:/Users/blobs/OneDrive/Documents/Commit changes to wrong branch but didn't push.docx",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/job/64e9dbb2a55b0d002bb4bc7c",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"job",
+						"64e9dbb2a55b0d002bb4bc7c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Job Application",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lorem Ipsun",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "abc@abc.com",
+									"type": "text"
+								},
+								{
+									"key": "contactNumber",
+									"value": "9483434932",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "2 years",
+									"type": "text"
+								},
+								{
+									"key": "currentJobLocation",
+									"value": "Ahmedabad",
+									"type": "text"
+								},
+								{
+									"key": "currentOrganization",
+									"value": "Blobstation",
+									"type": "text"
+								},
+								{
+									"key": "currentCtc",
+									"value": "10 lakhs",
+									"type": "text"
+								},
+								{
+									"key": "expectedCtc",
+									"value": "15 lakhs",
+									"type": "text"
+								},
+								{
+									"key": "noticePeriod",
+									"value": "2 months",
+									"type": "text"
+								},
+								{
+									"key": "currentDesignation",
+									"value": "Developer",
+									"type": "text"
+								},
+								{
+									"key": "CV",
+									"type": "file",
+									"src": "/C:/Users/blobs/Downloads/Aadhar.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "340"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"154-nscYc3UgQ+Y0BtLQLwJaIb/B17M\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Aug 2023 11:52:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Lorem Ipsun\",\n    \"email\": \"abc@abc.com\",\n    \"contactNumber\": \"9483434932\",\n    \"experience\": \"2 years\",\n    \"currentJobLocation\": \"Ahmedabad\",\n    \"currentOrganization\": \"Blobstation\",\n    \"currentCtc\": \"10 lakhs\",\n    \"expectedCtc\": \"15 lakhs\",\n    \"noticePeriod\": \"2 months\",\n    \"currentDesignation\": \"Developer\",\n    \"CV\": \"1691754746150.jpeg\",\n    \"_id\": \"64d620fa4a48e444101c1d6a\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Job Application",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/job/64e9dbb2a55b0d002bb4bc7c",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"job",
+						"64e9dbb2a55b0d002bb4bc7c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Job Application",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/job/64e2fbd0873b0143bc2f8b99",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"64e2fbd0873b0143bc2f8b99"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "434"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b2-k3zdQSmn+943+GNFd04uKMR0c+s\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Aug 2023 06:48:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Shubham Poddar\",\n    \"email\": \"shubham.poddar@blobstation.com\",\n    \"contactNumber\": \"9483434932\",\n    \"experience\": \"2 years\",\n    \"currentJobLocation\": \"Ahmedabad\",\n    \"currentOrganization\": \"Blobstation\",\n    \"currentCtc\": \"10 lakhs\",\n    \"expectedCtc\": \"15 lakhs\",\n    \"noticePeriod\": \"2 months\",\n    \"currentDesignation\": \"Developer\",\n    \"CV\": \"1692597200611.pdf\",\n    \"leadSource\": \"blobstationWebsite\",\n    \"_id\": \"64e2fbd0873b0143bc2f8b99\",\n    \"createdAt\": \"2023-08-21T05:53:20.621Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Download CV",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/job/download/64f190ea6f7b9836a4b65221",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"job",
+						"download",
+						"64f190ea6f7b9836a4b65221"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
