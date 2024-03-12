@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Login-SignUp"
+		},
+		{
+			"path": "../../../../Admin-Panel-Registration"
+		},
+		{
+			"path": "../../../../New-Registration"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "stacked-card-carousel"
+	}
+}

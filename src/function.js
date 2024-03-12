@@ -63,7 +63,7 @@ onFileChange(e) {
         selectedName: file.name, 
         fileValidationError: '', 
     }); 
-    console.log('Selected File:', this.state.selectedFile); 
+    console.log('Selected File:', file); 
     console.log('File Name:', file.name); 
     console.log('File Size:', file.size); 
     console.log('File Type:', file.type); 

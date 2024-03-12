@@ -1,6 +1,8 @@
 import React from 'react'
 import './App.css'
+import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { useForm } from 'react-hook-form';
 import { About } from './Pages/about';
 import { Home } from './Pages/Home';
 import { Router, Route, Link, BrowserRouter, json } from 'react-router-dom';
@@ -104,6 +106,7 @@ class SecondaryForm extends React.Component {
   onFileChange(e) {
     const {selectedFile} = this.state;
     const file = e.target.files[0];
+    this.setState({selectedFile : file})
     console.log(file)
     // Valid file types (PDF, Word, and Doc)
     const allowedFileTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
@@ -254,16 +257,20 @@ class SecondaryForm extends React.Component {
     const { myRef, selectedFile, name, email, phone, noticePeriod, jobLocation, currentOrganization, currentCtc, expectedCtc, experience, status, selectedName } = this.state;
     this.setState({status})
     const captchaValue = myRef.current;
-    const formData = new FormData(e.currentTarget)
-    const data = Object.fromEntries(formData)
-    console.log(data)
-    fetch('https://blobstation.free.beeceptor.com', {
-      method: 'POST',
-      headers: {
-        "content-type": "application/json; charset=utf-8",
-      },
-      body: data
-    })
+    const formData = new FormData()
+    formData.append("name", name)
+    formData.append("email", email)
+    formData.append("phone", phone)
+    formData.append("noticePeriod", noticePeriod)
+    formData.append("jobLocation", jobLocation)
+    formData.append("currentOrganization", currentOrganization)
+    formData.append("currentCtc", currentCtc)
+    formData.append("expectedCtc", expectedCtc)
+    formData.append("experience", experience)
+    formData.append("cv", selectedFile)
+    formData.append("designationValue", param)
+    console.log(formData)
+    axios.post('https://blobstation.free.beeceptor.com', formData)
       .then((res) => { console.log(res) })
       .then((response) => {
         if (response.status === 200) {
@@ -276,7 +283,6 @@ class SecondaryForm extends React.Component {
       .catch((err) => {
         console.log(err);
       })
-      e.currentTarget.reset();
   }
 
   removeFile() {
